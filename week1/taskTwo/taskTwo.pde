@@ -14,6 +14,9 @@ boolean happy = true;
 println("Hi, my name is " + name);
 println("I am " + age + " years old");
 
+
+print("I ");
 if (!happy) {
-println("I dont clap my hands");
+  print("dont ");
 }
+print("clap my hands");
