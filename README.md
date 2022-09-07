@@ -1,1 +1,3 @@
-# Dat1-ugeopgave1
+Anders Hein Larsen
+
+cph-al419@cphbusiness.dk
