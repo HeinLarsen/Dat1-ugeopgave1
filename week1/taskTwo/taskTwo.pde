@@ -1,5 +1,5 @@
 // 2.a
-String name = "Anders hein Larsen";
+String name = "Anders Hein Larsen";
 println(name);
 
 // 2.b
