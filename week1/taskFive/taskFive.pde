@@ -12,13 +12,12 @@ void MethodOne()
   int i = 1000; // You are not allowed to change this line.
 
   int max = 10;
-  String output = "";
   if (i > max)
   {
-    output = "i is greater than "+max+".";
+    String output = "i is greater than "+max+".";
+    println(output);
   }
 
-  println(output);
 }
 
 /*
@@ -27,7 +26,7 @@ void MethodOne()
  */
 void MethodTwo()
 {
-  int weekDay = 3; // 0 = Monday, 6 = Sunday.
+  int weekDay = 0; // 0 = Monday, 6 = Sunday.
   boolean weekend = false;
 
   if (weekDay < 5)
