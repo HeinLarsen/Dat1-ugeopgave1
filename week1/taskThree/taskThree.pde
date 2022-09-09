@@ -15,7 +15,7 @@ void draw() {
   // trafficLight();
   
   // 4.b
-  trafficLightOff();
+  //trafficLightOff();
   
   // 4.c
   switchLight();
@@ -43,6 +43,8 @@ void trafficLightOff() {
 
 // 4.c
 void switchLight() {
+  
+  trafficLightOff();
 
   if ( frameCount % 2 == 0 ) {
     fill(green);
