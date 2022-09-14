@@ -1,87 +1,158 @@
 int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 String[] names = {"John", "Steve", "Benjamin", "Michelle", "Patrick", "Karin"};
 
-
-// 1
-println("*1*");
 float sum = 0;
 
-for (int i = 0; i < numbers.length; i++) {
-  sum += numbers[i];
+void setup() {
+  //// 1
+  //printSum();
+
+  //// 2
+  //printGrid();
+
+  //// 3
+  printAvg();
+
+  //// 4
+  //findName();
+
+  //// 5
+  //findIndex();
+
+  // 6
+  //removeElement();
+
+  //// 7
+  //copyArr();
+
+  //// 8
+  //findMinMax();
+
+  //// 9
+  //reverseArr();
+
+  //// 10
+  //isOddOrEven();
+
+  //// 11
+  //checkIfArrContains();
 }
+// 1
+public void printSum() {
 
-println(sum);
+  for (int i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
 
+  println(sum);
+}
 
 // 2
-println("*2*");
-for (int i = 0; i < 6; i++) {
-  for (int j = 0; j < 10; j++) {
-    print("- ");
+public void printGrid() {
+  for (int i = 0; i < 6; i++) {
+    for (int j = 0; j < 10; j++) {
+      print("- ");
+    }
+    println();
   }
-  println();
 }
 
-
 // 3
-println("*3*");
-println(sum/numbers.length);
-
+public void printAvg() {
+  printSum();
+  println(sum/numbers.length);
+}
 
 // 4
-println("*4*");
-String name = "Steve";
+public void findName() {
+  String name = "Steve";
 
-for (int i = 0; i < names.length; i++) {
-  if (names[i] == name) {
-    println(name + " exists in array");
+  for (int i = 0; i < names.length; i++) {
+    if (names[i] == name) {
+      println(name + " exists in array");
+    }
   }
 }
 
 // 5
-println("*5*");
-String value = "Benjamin";
-for (int i = 0; i < names.length; i++) {
-  if (names[i] == value) {
-    println(i);
+public void findIndex() {
+  String value = "Benjamin";
+  for (int i = 0; i < names.length; i++) {
+    if (names[i] == value) {
+      println(i);
+    }
   }
 }
 
 
 // 6
+public void removeElement() {
+  int value = 3;
+  int newArray[] = new int[numbers.length -1 ];
+  for (int i = 0; i < (numbers.length -1); i++) {
+    if (numbers[i] == value) {
+      i++;
+    }
+    if (numbers[i] != value) {
+      newArray[i] = numbers[i];
+    }
+  }
+
+
+  println(newArray);
+}
+
 
 // 7
-println("*7*");
-int newArray[] = new int[numbers.length];
-for(int i = 0; i < numbers.length; i++) {
-  newArray[i] = numbers[i];
+public void copyArr() {
+  int newArray[] = new int[numbers.length];
+  for (int i = 0; i < numbers.length; i++) {
+    newArray[i] = numbers[i];
+  }
+  println(newArray);
 }
-println(newArray);
 
 // 8
-println("*8*");
-println(numbers[0]);
-println(numbers[numbers.length -1]);
-
+public void findMinMax() {
+  println(numbers[0]);
+  println(numbers[numbers.length -1]);
+}
 // 9
-println("*9*");
+public void reverseArr() {
+  int[] tmpNumbers = reverse(numbers);
+  println(tmpNumbers);
+}
 
 
-
-println("*10*");
 // 10
-for ( int i = 0; i < numbers.length; i++) {
-  if (numbers[i] % 2 == 0) {
-    println(numbers[i] + " is even");
-  } else {
-    println(numbers[i] + " is odd");
+public void isOddOrEven() {
+  for ( int i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+      println(numbers[i] + " is even");
+    } else {
+      println(numbers[i] + " is odd");
+    }
   }
 }
 
 
 // 11
-int value1 = 12;
-int value2 = 5;
+public void checkIfArrContains() {
+  int value1 = 5;
+  int value2 = 12;
+  boolean con1 = false;
+  boolean con2 = false;
 
-for (int i = 0; i < numbers.length; i++) {
+  for (int i = 0; i < numbers.length; i++) {
+    if (value1 == numbers[i]) {
+      con1 = true;
+    }
+    if (value2 == numbers[i]) {
+      con2 = true;
+    }
+    if (con1 && con2) {
+      println("Both numbers exists");
+      return ;
+    }
+  }
 }
