@@ -26,7 +26,7 @@ void setup() {
   //copyArr();
 
   //// 8
-  findMinMax();
+  //findMinMax();
 
   //// 9
   //reverseArr();
