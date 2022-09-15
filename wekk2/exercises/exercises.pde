@@ -11,7 +11,7 @@ void setup() {
   //printGrid();
 
   //// 3
-  printAvg();
+  //printAvg();
 
   //// 4
   //findName();
@@ -20,7 +20,7 @@ void setup() {
   //findIndex();
 
   // 6
-  //removeElement();
+  removeElement();
 
   //// 7
   //copyArr();
