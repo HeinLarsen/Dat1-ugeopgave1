@@ -20,13 +20,13 @@ void setup() {
   //findIndex();
 
   // 6
-  removeElement();
+  //removeElement();
 
   //// 7
   //copyArr();
 
   //// 8
-  //findMinMax();
+  findMinMax();
 
   //// 9
   //reverseArr();
@@ -87,19 +87,16 @@ public void findIndex() {
 
 // 6
 public void removeElement() {
-  int value = 3;
-  int newArray[] = new int[numbers.length -1 ];
-  for (int i = 0; i < (numbers.length -1); i++) {
-    if (numbers[i] == value) {
-      i++;
-    }
-    if (numbers[i] != value) {
-      newArray[i] = numbers[i];
-    }
-  }
-
-
-  println(newArray);
+  int index = 2;
+  int index2 = numbers.length -1;
+  int old = numbers[index];
+  numbers[index] = numbers[index2];
+  numbers[index2] = old;
+  numbers = shorten(numbers);
+  int[] newArr = sort(numbers);
+  
+  println(newArr);
+  
 }
 
 
@@ -114,8 +111,8 @@ public void copyArr() {
 
 // 8
 public void findMinMax() {
-  println(numbers[0]);
-  println(numbers[numbers.length -1]);
+  println(min(numbers));
+  println(max(numbers));
 }
 // 9
 public void reverseArr() {
