@@ -30,4 +30,5 @@ public class Building {
     public boolean getIsOfficeBuilding() {
         return isOfficeBuilding;
     }
+
 }
