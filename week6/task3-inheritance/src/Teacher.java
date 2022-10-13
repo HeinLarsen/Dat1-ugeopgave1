@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Teacher extends Person {
     private ArrayList<String> canTeach;
-    private ArrayList<String> currentCourses;
+    private ArrayList<String> currentCourses = new ArrayList<>();
 
     public Teacher(String name, ArrayList canTeach) {
         super(name);
@@ -12,10 +12,10 @@ public class Teacher extends Person {
     @Override
     public boolean addCourse(String course) {
         if (canTeach.contains(course)) {
-            return false;
-        } else  {
-            canTeach.add(course);
+            currentCourses.add(course);
             return true;
+        } else  {
+            return false;
         }
     }
 }

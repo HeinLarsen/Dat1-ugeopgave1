@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Student extends Person {
     private ArrayList<String> passedCourses;
-    private ArrayList<String> currentCourses;
+    private ArrayList<String> currentCourses = new ArrayList<>();
 
     public Student(String name, ArrayList passedCourses) {
         super(name);
@@ -14,7 +14,7 @@ public class Student extends Person {
         if (passedCourses.contains(course)) {
             return false;
         } else  {
-            passedCourses.add(course);
+            currentCourses.add(course);
             return true;
         }
     }

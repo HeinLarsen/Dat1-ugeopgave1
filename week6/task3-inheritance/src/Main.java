@@ -1,34 +1,31 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<String> rndCourses = new ArrayList<>();
-        rndCourses.add("Biology C");
-        rndCourses.add("Biology B");
-        rndCourses.add("Biology A");
-        rndCourses.add("Math C");
-        rndCourses.add("Math B");
-        rndCourses.add("Math A");
-        rndCourses.add("English C");
-        rndCourses.add("English B");
-        rndCourses.add("English A");
 
-        String[] studentNames = {"Alfred", "Benny", "Charlie", "David"};
-        String[] teacherNames = {"James", "Simon", "Michael", "Tom"};
+        Student s1 = new Student("Alfred", new ArrayList<String>(Arrays.asList("Math")));
+        Student s2 = new Student("Benny", new ArrayList<String>(Arrays.asList("Java 1.0")));
+        Student s3 = new Student("james", new ArrayList<String>(Arrays.asList("English")));
+
+        Teacher t1 = new Teacher("Charlie", new ArrayList<String>(Arrays.asList("Math")));
+        Teacher t2 = new Teacher("Xenia", new ArrayList<String>(Arrays.asList("Java 1.0")));
+        Teacher t3 = new Teacher("Zack", new ArrayList<String>(Arrays.asList("English")));
+
         ArrayList<Person> ppl = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            ppl.add(new Student(studentNames[i], rndCourses(rndCourses) ));
-            ppl.add(new Teacher(teacherNames[i], rndCourses(rndCourses) ));
-        }
-        System.out.println(ppl);
-        ppl.get(1).addCourse("Java 1.0");
-        ppl.get(2).addCourse("Java 1.0");
+        ppl.add(s1);
+        ppl.add(s2);
+        ppl.add(s3);
+        ppl.add(t1);
+        ppl.add(t2);
+        ppl.add(t3);
+
 
         for (int i = 0; i < ppl.size(); i++) {
-            var res = ppl.get(i).addCourse("Java 1.0");
-            if (!res) {
+            boolean res = ppl.get(i).addCourse("Java 1.0");
+            if (res == false) {
                 if (ppl.get(i) instanceof Student) {
                     System.out.println(ppl.get(i).getName() + " Har allerede bestået dette kursus");
                 } else {
@@ -39,15 +36,5 @@ public class Main {
 
 
 
-    }
-
-
-    public static ArrayList rndCourses(ArrayList<String> c) {
-        ArrayList<String> tmpArrList = new ArrayList<>();
-        for (int i = 0; i < 2; i++) {
-            Random rand = new Random();
-            tmpArrList.add(c.get(rand.nextInt(8)));
-        }
-        return tmpArrList;
     }
 }
