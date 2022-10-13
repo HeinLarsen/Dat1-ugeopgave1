@@ -14,6 +14,7 @@ public class Student extends Person {
         if (passedCourses.contains(course)) {
             return false;
         } else  {
+            passedCourses.add(course);
             return true;
         }
     }

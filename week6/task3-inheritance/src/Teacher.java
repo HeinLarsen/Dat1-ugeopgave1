@@ -12,9 +12,9 @@ public class Teacher extends Person {
     @Override
     public boolean addCourse(String course) {
         if (canTeach.contains(course)) {
-
             return false;
         } else  {
+            canTeach.add(course);
             return true;
         }
     }

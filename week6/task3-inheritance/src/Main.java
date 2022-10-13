@@ -28,7 +28,6 @@ public class Main {
 
         for (int i = 0; i < ppl.size(); i++) {
             var res = ppl.get(i).addCourse("Java 1.0");
-            System.out.println(res);
             if (!res) {
                 if (ppl.get(i) instanceof Student) {
                     System.out.println(ppl.get(i).getName() + " Har allerede bestået dette kursus");
